@@ -1,84 +1,145 @@
-## Namaste React Course by Akshay Saini
-# _Chapter 01 - Inception_
+# Chapter - 13 - Time for the test
 
-## Q: What is `Emmet`?
-A: `Emmet` is the essential toolkit for web-developers. It allows you to `type shortcuts` that are then expanded into full pieces of code for writing `HTML and CSS`, based on an abbreviation structure most developers already use that expands into full-fledged HTML markup and CSS rules.
+### Q: What are the `different types of testing`?
+A: `Testing` is a crucial aspect of software development, helping ensure that the code behaves as expected and meets the specified requirements. There are various types of testing, each serving a specific purpose in the software development life cycle. Here are some common types of testing:
 
+### Unit Testing:
+`Purpose`: To test individual units or components of a software system in isolation.
+`Scope`: Focuses on a specific function, method, or class.
+`Tools/Frameworks`: Jest, Mocha, JUnit.
 
-## Q: Difference between a `Library and Framework`?
-A: `React (Library):`
+### Integration Testing:
+`Purpose`: To test the interactions between different units or components within a system.
+`Scope`: Involves testing the connections between modules or systems.
+`Tools/Frameworks`: TestNG, Mockito.
 
-`Collection of Tools:` React is a JavaScript library for building user interfaces, especially for single-page applications.
+### Functional Testing:
+`Purpose`: To verify that the software system behaves according to specified functional requirements.
+`Scope`: Involves testing the application's features and user interactions.
+`Types`: Black-box testing, White-box testing.
+`Tools/Frameworks`: Selenium, Cypress, JUnit, TestNG.
 
-`Your Control:` With React, you decide how to structure your application. You call the functions and methods provided by React to create components, manage state, and handle events.
+### Performance Testing:
+`Purpose`: To evaluate the system's performance, scalability, and responsiveness under various conditions.
+`Types`: Load testing, Stress testing, Scalability testing.
+`Tools/Frameworks`: Apache JMeter, Gatling, LoadRunner.
 
-`Example:` Using React is like having a set of tools (like hammers and nails) to build parts of your house (user interface) as you see fit. You are free to design the structure and layout.
+### Usability Testing:
+`Purpose`: To assess how user-friendly and intuitive the software's user interface is.
+`Involves`: Observing real users interacting with the system.
+`Tools/Frameworks`: User testing platforms, Surveys, Observations.
 
-`Next.js (Framework):`
+---
 
-`Structure and Tools:` Next.js is a framework built on top of React that provides a structured way to develop web applications. It includes additional features like server-side rendering, static site generation, and routing out of the box.
+### Q: What is `Enzyme`?
+A: `Enzyme` is a JavaScript testing utility for React that was developed by Airbnb. It provides a set of tools for testing React components' output and behavior in a simple and intuitive manner. Enzyme makes it easier to interact with and assert on React components, allowing developers to write tests for their React applications more efficiently.
 
-`Framework's Control:` With Next.js, the framework provides a defined structure for your application. It handles routing and rendering, and you plug your React components into this structure. The framework controls the flow and dictates certain conventions you need to follow.
+Key features of Enzyme include:
 
-`Example:` Using Next.js is like having a pre-designed house plan (framework) where the main structure is already determined (routing, rendering). You still build the rooms and decorate (using React components), but within the guidelines set by Next.js.
+### 1. Shallow Rendering: 
+Enzyme allows for shallow rendering, which means it renders only the component being tested, not its children. This can be useful for isolating the component under test and focusing on its behavior.
 
-React gives you the flexibility to design your application as you wish, while Next.js offers a structured approach with additional features to streamline development.
+```
+import { shallow } from 'enzyme';
 
-## Q: What is `CDN`? Why do we use it?
-A: A `content delivery network (CDN)` refers to a geographically distributed group of servers that work together to provide fast delivery of Internet content.
-The main use of a CDN is to deliver content through a network of servers in a secure and efficient way.
-
-
-## Q: Why is `React known as React`?
-A: `React` is named React because of its ability to `react to changes in data`.
-React is called React because it was designed to be a declarative, efficient, and flexible JavaScript library for building user interfaces.
-The name `React` was chosen because the library was designed to allow developers to "react" to changes in state and data within an application, and to update the user interface in a declarative and efficient manner.
-`React` is a `JavaScript-based UI development library`. `Facebook` and an `open-source developer community` run it.
-
-
-## Q: What is `crossorigin in script tag`?
-A: The `crossorigin` attribute sets the mode of the request to an HTTP CORS Request. 
-The purpose of crossorigin attribute is used to share the resources from one domain to another domain. Basically, it is used to handle the CORS request. It is used to handle the CORS request that checks whether it is safe to allow for sharing the resources from other domains.
-### _Syntax_
-```sh
-<script crossorigin="anonymous|use-credentials">
+const wrapper = shallow(<MyComponent />);
 ```
 
-## Q: What is difference between `React and ReactDOM`?
-A: `React` is a JavaScript library for building User Interfaces whereas `ReactDOM` is also JavaScript library that allows `React to interact with the DOM`.
-The react package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The react-dom package contains `ReactDOM.render()`, and in react-dom/server we have server-side rendering support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
+### 2. Full Rendering: 
+Enzyme also supports full rendering, where the entire component tree is rendered, including child components. This provides a more realistic rendering environment for testing.
 
+```
+import { mount } from 'enzyme';
 
-## Q: What is difference between `react.development.js` and `react.production.js` files via `CDN`?
-A: `Development` is the stage of an application before it's made public while `production` is the term used for the same application when it's made `public`.
-`Development build` is several times (maybe 3-5x) `slower` than the `production build`.
-
-
-## Q: What is `async and defer`?
-A: `Async` - The async attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed as soon` as it is available (do not block HTML DOM construction during downloading process) and don’t wait for anything.
-### _Syntax_
-```sh
-<script src="demo_async.js" async></script>
+const wrapper = mount(<MyComponent />);
 ```
 
-`Defer` - The defer attribute is a `boolean attribute`. The script is downloaded in `parallel(in the background)` to parsing the page, and `executed after the page` has finished parsing(when browser finished DOM construction). The `defer attribute` tells the browser `not to wait for the script`. Instead, the browser will continue to process the HTML, build DOM.
-### _Syntax_
-```sh
-<script src="demo_defer.js" defer></script>
+### 3 Component Inspection and Interaction:
+
+Enzyme provides a range of methods for inspecting and interacting with components. For example, you can find elements by CSS selectors, check component state and props, simulate events, and more.
+```
+const wrapper = shallow(<MyComponent />);
+
+// Example: Find an element by class name
+const element = wrapper.find('.my-class');
+
+// Example: Simulate a click event
+element.simulate('click');
 ```
 
-Unless you're supporting ancient legacy systems, always add `type="module"` to all your script tags:
-```sh
-<script type="module" src="main.js"></script> and place the tag inside <head>
+### 4. Snapshot Testing:
+Enzyme is often used in conjunction with snapshot testing libraries like Jest's snapshot testing. Snapshots capture the rendered output of a component and allow you to easily detect unintended changes.
+
 ```
-```sh
- <script defer nomodule> can be used as a legacy fallback.
+import { shallow } from 'enzyme';
+
+test('renders correctly', () => {
+  const wrapper = shallow(<MyComponent />);
+  expect(wrapper).toMatchSnapshot();
+});
 ```
 
+### 5 API for Various Assertions:
+Enzyme provides a variety of assertions to check the state, props, and structure of components. These assertions make it easy to write clear and concise tests for React components.
+```
+const wrapper = shallow(<MyComponent />);
 
-As the name suggests, it allows you to import `modules`, which makes it easier to organize your code.
-Enable `strict mode` by default. This makes your code run faster, and reports more runtime errors instead of silently ignoring them.
-Execute your code only after the DOM has `initialized`, which makes DOM manipulation easier. Thanks to this, you won't need to listen to load/readystatechange/DOMContentLoaded events.
-Prevent top level variables from implicitly polluting the global namespace.
-Allow you to use top-level await in supported engines.
-Load and parse your code `asynchronously`, which improves load performance.
+// Example: Check if a prop exists
+expect(wrapper.prop('myProp')).toEqual('someValue');
+```
+
+### 6. Integration with Testing Libraries:
+Enzyme can be used with various testing libraries and frameworks, including Jest and Mocha. It integrates seamlessly with these tools to support the testing workflow.
+Enzyme is widely adopted in the React community for writing tests that cover different aspects of component behavior. It provides a flexible and expressive API, making it a popular choice for testing React applications. Note that as of my last knowledge update in January 2022, Enzyme was still actively maintained and used in many projects, but the React testing landscape evolves, and it's recommended to check for the latest updates and alternatives.
+
+---
+
+### Q: `Enzyme` vs `React Testing Library`?
+A: 
+### Enzyme vs. React Testing Library: A Simple Comparison
+
+### Enzyme
+`Philosophy`: Focuses on providing a set of utilities for testing React components with a strong emphasis on component structure and state.
+`Shallow Rendering`: Supports shallow rendering, allowing you to render a component without rendering its children. Useful for isolating the component under test.
+`Component Interaction`: Provides a range of methods for inspecting and interacting with components, making it easy to simulate events, find elements, and assert on component behavior.
+`API Design`: Offers a more complex API compared to React Testing Library, providing a comprehensive set of tools for component manipulation and assertion.
+`Popular for`: Projects that require detailed inspection and manipulation of React components, especially for complex state management.
+
+### React Testing Library:
+`Philosophy`: Emphasizes testing components in a way that closely aligns with how users interact with the application. Focuses on testing components in a manner that is more reflective of real-world use cases.
+`User-Centric Approach`: Encourages testing components based on their observable behavior, treating components more like a black box. It simulates user interactions and expects outcomes rather than focusing on internal implementation details.
+`Accessibility`: Places a strong emphasis on accessibility testing, encouraging developers to write tests that reflect how users with different abilities would interact with the application.
+`API Design`: Strives for a simpler and more user-centric API. Promotes using fewer methods that encourage testing components in a way that resembles user behavior.
+`Popular for`: Projects that prioritize testing from a user's perspective and aim for a more straightforward testing approach. Particularly suitable for applications with a focus on accessibility.
+
+### Which One to Choose:
+`Enzyme`: Choose Enzyme if you need detailed control over component rendering, manipulation, and inspection. It's great for testing complex component structures and state.
+`React Testing Library`: Choose React Testing Library if you prefer a simpler, user-centric approach to testing that aligns with how your users would interact with the application. It's excellent for testing components based on their observable behavior.
+Ultimately, the choice between Enzyme and React Testing Library depends on your testing philosophy, the complexity of your components, and your preference for testing style. Some projects even use both libraries based on specific testing needs within the application.
+
+---
+
+### Q: What is `Jest` and why do we use it?
+A: `Jest` is a popular JavaScript testing framework developed by Facebook. It is designed to be a zero-config testing platform that can be used for testing JavaScript code, including applications built with frameworks like React, Vue, Angular, and more. Jest is widely used in the JavaScript ecosystem, particularly in conjunction with React applications.
+
+### Key Features of Jest:
+
+`Zero Configuration`: Jest requires minimal configuration, making it easy to set up and start writing tests quickly. It comes with sensible defaults and requires little setup to get started.
+`Fast and Parallel Testing`: Jest is optimized for speed and efficiency. It supports parallel test execution, allowing tests to run concurrently and providing faster feedback during development.
+`Snapshot Testing`: Jest includes snapshot testing, a feature that allows you to capture the output of a component or function and compare it against a stored snapshot. It simplifies the process of detecting unintended changes in your code.
+`Built-in Matchers`: Jest provides a wide range of built-in matchers for making assertions in your tests. These matchers cover common use cases and make it easy to write expressive and readable tests.
+`Mocking`: Jest comes with built-in mocking capabilities, allowing you to easily create mocks for functions, modules, or even entire libraries. This simplifies the testing of components that depend on external resources.
+`Code Coverage`: Jest includes built-in support for code coverage analysis. It can generate coverage reports to help you identify which parts of your codebase are covered by tests and which need additional testing.
+`Test Suites and Test Cases`: Jest organizes tests into test suites and test cases. It provides a clear structure for organizing and running tests, making it easy to manage and maintain your test suite.
+
+### Why Use Jest:
+`Ease of Use`: Jest is known for its simplicity and ease of use. Setting up and running tests is straightforward, and the framework provides helpful error messages.
+`Comprehensive Testing`: Jest supports a variety of testing scenarios, including unit testing, integration testing, and end-to-end testing. It is versatile enough to cover different aspects of your application.
+`Community Support`: Jest has a large and active community, which means you can find plenty of resources, documentation, and third-party plugins. It is well-maintained and continuously improved.
+`Integration with React`: Jest is commonly used with React applications. It integrates seamlessly with React and works well with tools like React Testing Library and Enzyme.
+`Snapshot Testing`: Snapshot testing in Jest simplifies the process of detecting unintentional changes in your UI components. It's a powerful tool for maintaining visual consistency.
+`Fast Feedback Loop`: Jest's speed and parallel testing capabilities contribute to a fast feedback loop during development. Quick test execution allows developers to get immediate feedback on code changes.
+
+Jest is a versatile and user-friendly testing framework that provides a range of features to support the testing needs of JavaScript applications. It is particularly well-suited for testing React applications, and its zero-config approach makes it accessible to developers with varying levels of testing experience.
+
+---

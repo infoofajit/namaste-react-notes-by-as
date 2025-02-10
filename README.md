@@ -13,7 +13,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 02 - Igniting our App]()
+## [Chapter 02 - Igniting our App](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2002)
 - What is NPM?
 - What is Parcel/Webpack? Why do we need it?
 - What is .parcel-cache
@@ -34,7 +34,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 03 - Laying the foundation]()
+## [Chapter 03 - Laying the foundation](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2003)
 - What is JSX?
 - Superpowers of JSX.
 - Role of type attribute in script tag? What options can I use there?
@@ -42,7 +42,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 04 - Talk is Cheap, show me the code]()
+## [Chapter 04 - Talk is Cheap, show me the code](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2004)
 - Is JSX mandatory for React?
 - Is ES6 mandatory for React?
 - {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX.
@@ -57,7 +57,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 05 - Let's get Hooked!]()
+## [Chapter 05 - Let's get Hooked!](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2005)
 - What is the difference between Named export, Default export, and * as export?
 - What is the importance of config.js file?
 - What are React Hooks?
@@ -65,7 +65,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 06 - Exploring the world]()
+## [Chapter 06 - Exploring the world](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2006)
 - What is Microservice?
 - What is Monolith architecture?
 - What is the difference between `Monolith and Microservice?
@@ -80,7 +80,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 07 - Finding the Path]()
+## [Chapter 07 - Finding the Path](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2007)
 - What are various ways to add images into our App? Explain with code examples.
 - What would happen if we do console.log(useState())?
 - How will useEffect behave if we don't add a dependency array?
@@ -89,7 +89,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 08 - Let's get Classy]()
+## [Chapter 08 - Let's get Classy](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2008)
 - How do you create Nested Routes react-router-dom configuration?
 - Read about createHashRouter, createMemoryRouter from React Router docs.
 - What is the order of life cycle method calls in Class Based Components?
@@ -100,7 +100,7 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 09 - Optimizing our App]()
+## [Chapter 09 - Optimizing our App](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2009)
 - When and why do we need lazy()?
 - What is suspense?
 - Why we got this error: A component was suspended while responding to synchronous input. This will cause the UI to be replaced with a loading indicator. To fix this, updates that suspend should be wrapped with start transition? How does suspense fix this error?
@@ -109,16 +109,16 @@ namaste-react-notes-by-as
 
 ---
 
-## [Chapter 10 - Jo dikhta hai vo bikta hai]()
+## [Chapter 10 - Jo dikhta hai vo bikta hai](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2010)
 
 ---
 
-## [Chapter 11 - Data is the new Oil]()
+## [Chapter 11 - Data is the new Oil](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2011)
 
 ---
 
-## [Chapter 12 - Let's Build our Store]()
+## [Chapter 12 - Let's Build our Store](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2012)
 
 ---
 
-## [Chapter 13 - Time for the test]()
+## [Chapter 13 - Time for the test](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2013)
