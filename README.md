@@ -1,7 +1,7 @@
 # namaste-react-notes-by-as
 namaste-react-notes-by-as
 
-## [Chapter 01 - Inception]()
+## [Chapter 01 - Inception](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2001)
 - What is Emmet?
 - Difference between a Library and Framework?
 - What is CDN? Why do we use it?
