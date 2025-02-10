@@ -110,15 +110,36 @@ namaste-react-notes-by-as
 ---
 
 ## [Chapter 10 - Jo dikhta hai vo bikta hai](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2010)
+- Explore all the ways of writing css.
+- How do we configure tailwind?
+- In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)?
+- Why do we have .postcssrc file?
 
 ---
 
 ## [Chapter 11 - Data is the new Oil](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2011)
+- What is prop drilling?
+- What is lifting the state up?
+- What are Context Provider and Context Consumer?
+- If you don't pass a value to the provider does it take the default value?
 
 ---
 
 ## [Chapter 12 - Let's Build our Store](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2012)
+- useContext vs Redux
+- Advantages of using Redux Toolkit over Redux
+- Explain Dispatcher.
+- Explain Reducer.
+- Explain Slice.
+- Explain Selector.
+- Explain createSlice and the configuration it takes.
 
 ---
 
 ## [Chapter 13 - Time for the test](https://github.com/infoofajit/namaste-react-notes-by-as/tree/main/Chapter%2013)
+- What are the difference types of Testing?
+- React Testing Library and It's set up
+- What is Jest and why do we use it?
+- Jest setup and installation of it's related
+
+---
